@@ -2,7 +2,8 @@ import pandas as pd
 import seaborn as sns
 
 #read csv file
-df = pd.read_csv('jesseli02/data.csv')
+url = 'https://raw.githubusercontent.com/McGillAISociety/mais-202-coding-challenge/master/data.csv'
+df = pd.read_csv(url)
 
 #create new dataframe with mean of each purpose
 rates = df.groupby(df['purpose']).int_rate.mean()
